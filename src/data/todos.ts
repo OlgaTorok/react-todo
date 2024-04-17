@@ -14,6 +14,6 @@ export const mockData: Todo[] = [
   {
     id: 3,
     title: 'Learn React 👩🏻‍💻',
-    completed: true
+    completed: false
   }
 ];
