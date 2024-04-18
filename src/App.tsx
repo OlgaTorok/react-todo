@@ -1,12 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { mockData } from './data/todos';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
 import TodoInfo from './components/TodoInfo';
+import { Todo } from './types/todos';
 
 function App() {
-  const [todos, setTodos] = useState(mockData);
+  const [todos, setTodos] = useState(() => {
+    const savedTodos: Todo[] = JSON.parse(
+      localStorage.getItem('todos') || '[]'
+    );
+    return savedTodos.length > 0 ? savedTodos : mockData;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   function setTodoCompleted(id: number, completed: boolean) {
     setTodos((prevTodo) =>
