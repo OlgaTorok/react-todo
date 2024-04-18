@@ -3,6 +3,7 @@ import './App.css';
 import { mockData } from './data/todos';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
+import TodoInfo from './components/TodoInfo';
 
 function App() {
   const [todos, setTodos] = useState(mockData);
@@ -14,11 +15,11 @@ function App() {
   }
 
   function addTodo(title: string) {
-    
+    // If we have  a database this will not be needed
     setTodos((prevTodos) => [
       ...prevTodos,
       {
-        id: prevTodos.length + 1,
+        id: Date.now(),
         title,
         completed: false,
       },
@@ -27,6 +28,10 @@ function App() {
 
   function deleteTodo(id: number) {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+  }
+
+  function deleteAllCompleted() {
+    setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed));
   }
 
   return (
@@ -42,6 +47,10 @@ function App() {
           onDelete={deleteTodo}
         />
       </div>
+      <TodoInfo
+        todos={todos}
+        deleteAllCompleted={deleteAllCompleted}
+      />
     </main>
   );
 }
