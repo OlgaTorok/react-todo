@@ -15,7 +15,7 @@ function TodoInfo({ todos, deleteAllCompleted }: TodoInformation) {
       </p>
       {completedTodos.length > 0 && (
         <button
-          className='text-red-500 text-sn font-medium'
+          className='text-red font-medium border rounded p-2 my-4'
           onClick={deleteAllCompleted}
         >
           Delete all completed

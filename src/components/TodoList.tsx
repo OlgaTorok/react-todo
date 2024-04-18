@@ -28,7 +28,7 @@ function TodoList({ todos, onComplete, onDelete }: TodoListProps) {
         ))}
       </div>
       {todos.length === 0 && (
-        <p className='text-center text-sm text-slate-500'>
+        <p className='text-center text-sm text-slate'>
           No todos yet. Add a new todo.
         </p>
       )}

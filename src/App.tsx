@@ -10,7 +10,7 @@ function App() {
 
   return (
     <main className='bg-white bg-center h-screen p-10 overflow-y-auto'>
-      <h1 className='font-bold text-3xl text-center text-slate-900 p-4'>
+      <h1 className='font-bold text-3xl text-center text-slateDark p-4'>
         Your Todos
       </h1>
       <div className='max-w-lg mx-auto bg-slate-100 rounded-md p-6 space-y-6'>
