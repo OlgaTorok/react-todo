@@ -9,10 +9,7 @@ function TodoInfo({ todos, deleteAllCompleted }: TodoInformation) {
   const completedTodos = todos.filter((todo) => todo.completed);
 
   return (
-    <div className='text-center my-4'>
-      <p>
-        {completedTodos.length}/{todos.length} todos completed.
-      </p>
+    <div className='text-center'>
       {completedTodos.length > 0 && (
         <button
           className='text-red font-medium border rounded p-2 my-4'

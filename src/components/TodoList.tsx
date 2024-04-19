@@ -8,6 +8,8 @@ interface TodoListProps {
 }
 
 function TodoList({ todos, onComplete, onDelete }: TodoListProps) {
+  const completedTodos = todos.filter((todo) => todo.completed);
+
   const sortedTodos = todos.sort((a, b) => {
     if (a.completed === b.completed) {
       return b.id - a.id;
@@ -17,6 +19,11 @@ function TodoList({ todos, onComplete, onDelete }: TodoListProps) {
 
   return (
     <>
+      <div className='text-center my-4'>
+        <p>
+          {completedTodos.length}/{todos.length} task completed.
+        </p>
+      </div>
       <div className='space-y-2'>
         {sortedTodos.map((todo) => (
           <TodoItem
@@ -29,7 +36,7 @@ function TodoList({ todos, onComplete, onDelete }: TodoListProps) {
       </div>
       {todos.length === 0 && (
         <p className='text-center text-sm text-slate'>
-          No todos yet. Add a new todo.
+          No tasks yet, add a new task.
         </p>
       )}
     </>

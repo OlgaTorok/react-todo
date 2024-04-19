@@ -13,7 +13,7 @@ function TodoItem({ todo, onComplete, onDelete }: TodoItemProps) {
       <label className='flex grow items-center gap-4 py-2 px-4 border-2 border-slateLight rounded-md bg-white hover:bg-slateLight'>
         <input
           type='checkbox'
-          className='scale-150'
+          className='scale-150 accent-slateDark'
           checked={todo.completed}
           onChange={(e) => onComplete(todo.id, e.target.checked)}
         />

@@ -22,7 +22,7 @@ function AddTodo({ onSubmit }: AddTodoProps) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         type='text'
-        placeholder='Add new ToDo'
+        placeholder='Add new task'
         className='flex grow items-center gap-4 py-2 px-4 border-2 border-slateLight rounded-s-md bg-white'
       />
       <button
