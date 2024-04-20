@@ -5,7 +5,6 @@ export default {
   theme: {
     colors: {
       white: '#fff',
-      navy: '#1B2C45',
       slate: '#64748b',
       slateLight: '#e2e8f0',
       slateDark: '#1e293b',
