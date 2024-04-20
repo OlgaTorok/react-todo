@@ -12,7 +12,7 @@ function TodoInfo({ todos, deleteAllCompleted }: TodoInformation) {
     <div className='text-center'>
       {completedTodos.length > 0 && (
         <button
-          className='text-red font-medium border rounded p-2 my-4'
+          className='text-red font-medium border rounded p-2 my-4 dark:bg-slateLight'
           onClick={deleteAllCompleted}
         >
           Delete all completed

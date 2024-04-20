@@ -22,7 +22,7 @@ function TodoItem({ todo, onComplete, onDelete }: TodoItemProps) {
         </span>
       </label>
       <button className='p-2' onClick={() => onDelete(todo.id)}>
-        <Trash2 size={20} className='text-slate' />
+        <Trash2 size={20} className='text-slate dark:text-slateLight' />
       </button>
     </div>
   );

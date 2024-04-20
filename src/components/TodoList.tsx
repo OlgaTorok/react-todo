@@ -20,7 +20,7 @@ function TodoList({ todos, onComplete, onDelete }: TodoListProps) {
   return (
     <>
       <div className='text-center my-4'>
-        <p>
+        <p className='dark:text-slateLight'>
           {completedTodos.length}/{todos.length} task completed.
         </p>
       </div>
@@ -35,7 +35,7 @@ function TodoList({ todos, onComplete, onDelete }: TodoListProps) {
         ))}
       </div>
       {todos.length === 0 && (
-        <p className='text-center text-sm text-slate'>
+        <p className='text-center text-sm dark:text-slateLight'>
           No tasks yet, add a new task.
         </p>
       )}

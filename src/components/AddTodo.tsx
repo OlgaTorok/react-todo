@@ -27,7 +27,7 @@ function AddTodo({ onSubmit }: AddTodoProps) {
       />
       <button
         type='submit'
-        className='min-w-16 rounded-e-md bg-slateDark text-white hover:bg-slate'
+        className='min-w-16 rounded-e-md bg-slateDark dark:bg-slate text-white hover:bg-slate'
       >
         Add
       </button>
